@@ -31,8 +31,20 @@ function agregarAmigo() {
 
 
 
+function sortearAmigo() {
+    // si la lista esta llena genero el amigo secreto y lo muestro y sino envio un mensaje indicandolo
 
-
+    if (listaDeAmigoSecreto.length >= 1) {
+        // Genero un número aleatorio según la cantidad de elementos de la lista
+        indiceAmigoSecreto = Math.floor(Math.random() * listaDeAmigoSecreto.length);
+        amigoSecreto = listaDeAmigoSecreto[indiceAmigoSecreto];
+        resultado.innerHTML = 'tu amigo secreto es : ' + amigoSecreto;
+        mostrarListaDeAamigos.innerHTML = '';
+    }else{
+        resultado.innerHTML = 'No as agregado ningun amigo secreto aun ';   
+    };
+    
+};
 
 function limpiar() {
     listaDeAmigoSecreto = [];
