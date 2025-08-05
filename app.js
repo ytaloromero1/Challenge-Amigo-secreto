@@ -31,6 +31,27 @@ function agregarAmigo() {
 
 
 
+
+function actualizarListaDeAmigos() {
+        //almacenamos el <lu> con el id listaAmigos de en una variable
+        mostrarListaDeAamigos  = document.querySelector('#listaAmigos');
+        mostrarListaDeAamigos.innerHTML = '';
+
+        for (let amigo of listaDeAmigoSecreto) {
+            // Crear <li> y poner el nombre
+            let li = document.createElement('li');
+            li.textContent = amigo;
+            mostrarListaDeAamigos.appendChild(li);
+        };
+        
+};
+
+
+
+
+
+
+
 function sortearAmigo() {
     // si la lista esta llena genero el amigo secreto y lo muestro y sino envio un mensaje indicandolo
 
